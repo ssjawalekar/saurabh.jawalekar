@@ -1,0 +1,1 @@
+export default function ArchitectureFlow({nodes}:{nodes:string[]}){return <div className="flow">{nodes.map((n,i)=><div className="flowItem" key={n}><div><b>{n}</b><small>{i===0?'Business intent':i===nodes.length-1?'Controls & outcomes':'Architecture layer'}</small></div>{i<nodes.length-1&&<span>→</span>}</div>)}</div>}

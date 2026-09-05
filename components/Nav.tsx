@@ -1,0 +1,4 @@
+'use client';
+import Link from 'next/link';
+import {useState} from 'react';
+export default function Nav(){const [open,setOpen]=useState(false);return <header><div className="nav wrap"><Link href="/" className="logo">SJ.</Link><div className="links"><a href="/#work">Work</a><a href="/#journey">Journey</a><a href="/#thinking">Thinking</a><a href="/#archive">Archive</a><Link href="/playground">Playground</Link></div><button className="menu" onClick={()=>setOpen(!open)} aria-label="Open navigation">☰</button></div>{open&&<div className="mobile"><a href="/#work" onClick={()=>setOpen(false)}>Work</a><a href="/#journey" onClick={()=>setOpen(false)}>Journey</a><a href="/#thinking" onClick={()=>setOpen(false)}>Thinking</a><a href="/#archive" onClick={()=>setOpen(false)}>Archive</a><Link href="/playground" onClick={()=>setOpen(false)}>Playground</Link></div>}</header>}
